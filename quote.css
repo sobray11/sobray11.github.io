@@ -1,0 +1,67 @@
+.quote-area {
+  border-radius:8px;
+  background-color: grey;
+  margin:8% auto;
+  width: 65%;
+  padding:30px;
+  display:table;
+  background-color: #7e90a8;
+}
+.quote-area .quote-text {
+
+}
+
+.button {
+  float:right;
+  border:none;
+  animation: bgcolor 30s ease infinite;
+  color: white;
+  outline: none;
+  border-radius: 4px;
+  font-size : 20px;
+}
+
+.button:hover {
+  color: black;
+  opacity: .7;
+}
+
+.footer a {
+    font-weight:500;
+    color:#fff;
+    font-family: "Barlow";
+    width:450px;
+    text-align:center;
+    display:block;
+    margin:8% auto;
+  }
+
+html, body {
+  animation: bgcolor 30s ease infinite;
+}
+
+p {
+  color: white;
+  font-size: 24px;
+}
+
+@keyframes  bgcolor{
+    0%{
+        background: #27ae60;
+    }
+    20%{
+        background: #2980b9;
+    }
+    40%{
+        background: #8e44ad;
+    }
+    60%{
+        background: #c0392b;
+    }
+    800%{
+        background: #16a085;
+    }
+    100%{
+        background: #27ae60;
+    }
+}
