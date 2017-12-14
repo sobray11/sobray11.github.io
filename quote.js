@@ -5,7 +5,9 @@ function getQuote() {
   $.getJSON(url, function(data){
     $('#author').html("-" + data.quoteAuthor);
     $('#quote').html('"' + data.quoteText + '"');
-//   console.log("hello");
+    if(data.quoteAuthor == ""){
+      $('#author').html("-Anonymous");
+    }
 
 });
 }
