@@ -1,14 +1,18 @@
 .quote-area {
   border-radius:8px;
-  background-color: grey;
   margin:8% auto;
   width: 65%;
-  padding:30px;
+  padding:25px;
   display:table;
-  background-color: #7e90a8;
+  background-color: #e1e9f7;
 }
 .quote-area .quote-text {
 
+}
+
+.bottom-row {
+  display:block;
+  margin:8% auto;
 }
 
 .button {
@@ -21,6 +25,17 @@
   font-size : 20px;
 }
 
+.bottom-row #tweet {
+  font-size:48px;
+  color: #575b63;
+  float: left;
+  padding-bottom: 16px;
+  text-align:center;
+  margin-right:5px;
+  height:30px;
+  width:40px;
+}
+
 .button:hover {
   color: black;
   opacity: .7;
@@ -28,8 +43,9 @@
 
 .footer a {
     font-weight:500;
+    font-size: 24px;
     color:#fff;
-    font-family: "Barlow";
+    font-family: "Poppins";
     width:450px;
     text-align:center;
     display:block;
@@ -41,7 +57,7 @@ html, body {
 }
 
 p {
-  color: white;
+  color: #575b63;
   font-size: 24px;
 }
 
