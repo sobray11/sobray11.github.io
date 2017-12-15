@@ -5,11 +5,23 @@
   padding:25px;
   display:table;
   background-color: #e1e9f7;
+  color: #575b63;
+  font-family: 'Poppins';
+}
+
+.quote-area .quote-text {
+  text-align:center;
+  font-size: 24px;
+}
+
+.quote-area .quote-author {
+  text-align: right;
+  font-size: 16px;
+  padding-right: 6px;
 }
 
 .bottom-row {
-  display:block;
-  margin:8% auto;
+  /*margin:8% auto;*/
 }
 
 .button {
@@ -20,7 +32,7 @@
   outline: none;
   border-radius: 5px;
   font-size : 22px;
-  font-family: 'Muli';
+  font-family: 'Poppins';
   padding: 6px;
 }
 
@@ -30,7 +42,7 @@
   float: left;
   text-align:center;
   margin-right:5px;
-  height:30px;
+  /*height:30px;*/
   width:40px;
   /*vertical-align:text-top;*/
 }
@@ -46,7 +58,7 @@
 .footer {
     font-size: 24px;
     color: #e1e9f7;
-    font-family: 'Muli';
+    font-family: 'Poppins';
     text-align:center;
   }
 
@@ -59,8 +71,7 @@ html, body {
 }
 
 p {
-  color: #575b63;
-  font-size: 24px;
+
 }
 
 @keyframes  bgcolor{
