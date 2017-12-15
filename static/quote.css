@@ -41,16 +41,16 @@
   opacity: .7;
 }
 
-.footer a {
-    font-weight:500;
+.footer {
     font-size: 24px;
-    color:#fff;
-    font-family: "Poppins";
-    width:450px;
+    color: #e1e9f7;
+    font-family: 'Muli';
     text-align:center;
-    display:block;
-    margin:8% auto;
   }
+
+.footer a {
+  color: #e1e9f7;
+}
 
 html, body {
   animation: bgcolor 30s ease infinite;
