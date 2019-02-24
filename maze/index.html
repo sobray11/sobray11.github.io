@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maze</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill" rel="stylesheet">
+</head>
+
+
+<body id="body">
+
+    <div class="horizontal-box">
+
+        <div class="high-scores">
+
+            <div class="title">
+                <p>AMAZE MAZE</p>
+            </div>
+                <p id="scores-label">High Scores</p>
+                <ol id="scores-list">
+                    <li id="score-1">0</li>
+                    <li id="score-2">0</li>
+                    <li id="score-3">0</li>
+                    <li id="score-4">0</li>
+                    <li id="score-5">0</li>
+                </ol>
+
+            <p id="options"><b>Options</b></p>
+            <p>h - show hint</p>
+            <p>p - show path</p>
+            <p>b - show breadcrumbs</p>
+            
+        </div>
+
+        <div class="canvas-box">
+            <canvas id="canvas" width="600" height="600"></canvas>
+        </div>
+
+        <div class="scoreboard">
+            <p class="score">Current Score:</p>
+            <p class="score" id="current-score">10</p>
+            <p class="score">Current Time:</p>
+            <p class="score" id="current-time">0</p>
+            <button id="new-game-button">New Game</button>
+
+            <select id="size-options">
+                <option value="5">5x5</option>
+                <option value="10">10x10</option>
+                <option value="15">15x15</option>
+                <option value="20">20x20</option>
+              </select>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <p>Created by Scott Obray</p>
+    </div>
+
+    <script>
+        let Maze = {
+            objects: {},
+            graphics: {},
+            input: {},
+        };
+    </script>
+
+    <script src="scripts/solver.js"></script>
+    <script src="scripts/objects/hero.js"></script>
+    <script src="scripts/graphics.js"></script>
+    <script src="scripts/input.js"></script>
+    <script src="scripts/game.js"></script>
+</body>
+
+</html>
