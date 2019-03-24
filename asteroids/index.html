@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Asteroids</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Outline" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Outline" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+
+</head>
+
+<body onload="Asteroids.game.initialize();">
+
+    <div class="title">
+        <p>Asteroids</p>
+    </div>
+
+    <div id="audio-controls">
+            <label class="container">Game Music
+                    <input type="checkbox" id='music-check'>
+                    <span class="checkmark"></span>
+            </label>
+            <label class="container">Sound Affects
+                    <input type="checkbox" checked="checked" id='sound-check'>
+                    <span class="checkmark"></span>
+            </label>
+    </div>
+
+    <div id="game">
+        <div id="main-menu" class="screen">
+            <ul class="menu">
+                <li><button id="new-game-button">New Game</button></li>
+                <li><button id="high-scores-button">High Scores</button></li>
+                <li><button id="controls-button">Controls</button></li>
+                <li><button id="credits-button">Credits</button></li>
+            </ul>
+        </div>
+
+        <div id="game-play" class="screen">
+            <canvas id="id-canvas" width="1000" height="740"></canvas>
+        </div>
+
+        <div id="controls" class="screen">
+            <p class="controls-list"> Left Arrow - rotate left</p>
+            <p class="controls-list"> Right Arrow - rotate right</p>
+            <P class="controls-list"> Up Arrow - Thrust Forward</P>
+            <p class="controls-list"> "Z" - Hyperspace</p>
+            <p class="controls-list"> Escape - Back/Pause</p>
+            <ul class="menu">
+                <li><button id="controls-back-button">Back</button></li>
+            </ul>
+        </div>
+
+        <div id="high-scores" class="screen">
+            <h1 id="high-scores-title">High Scores</h1>
+            <ol>
+                <li class="score-list" id="score-1">0</li>
+                <li class="score-list" id="score-2">0</li>
+                <li class="score-list" id="score-3">0</li>
+                <li class="score-list" id="score-4">0</li>
+                <li class="score-list" id="score-5">0</li>
+            </ol>
+            <ul class="menu">
+                <li><button id="high-scores-back-button">Back</button></li>
+            </ul>
+        </div>
+
+        <div id="credits" class="screen">
+                <p class="controls-list">Developed by Scott Obray</p>
+                <p class="controls-list">Particle affects/drawings - Scott Obray</p>
+                <P class="controls-list"> Sound Affects - dklon</P>
+                <p class="controls-list"> Projectiles - Gumichan01</p>
+                <p class="controls-list"> Spaceships/Ufos/Asteroids - Unnamed</p>
+            <ul class="menu">
+                <li><button id="credits-back-button">Back</button></li>
+            </ul>
+        </div>
+
+        <div id="game-over" class="screen">
+            <p class="game-over-screen">Game Over</p>
+            <p class="game-over-screen" id="game-over-score">Score: </p>
+            <ul class="menu">
+                <li><button id="gameover-back-button">Menu</button></li>
+                <li><button id="gameover-new-game-button">New Game</button></li>
+            </ul>
+        </div>
+
+        <div id="pause-game" class="screen">
+            <ul class="menu">
+                <li><button id="pausegame-resume-button">Resume</button></li>
+                <li><button id="pausegame-quit-button">Quit</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let Asteroids = {
+            screens: {},
+            input: {},
+            objects: {},
+            graphics: {},
+            systems: {},
+        }
+    </script>
+
+    <script src="scripts/input.js"></script>
+    <script src="scripts/objects/playerShip.js"></script>
+    <script src="scripts/objects/ufoShip.js"></script>
+    <script src="scripts/objects/bullet.js"></script>
+    <script src="scripts/objects/asteroid.js"></script>
+    <script src="scripts/particleSystem.js"></script>
+    <script src="scripts/graphics.js"></script>
+    <script src="scripts/soundPlayer.js"></script>
+
+    <script src="scripts/game.js"></script>
+    <script src="scripts/screens/mainmenu.js"></script>
+    <script src="scripts/screens/gameplay.js"></script>
+    <script src="scripts/screens/highscores.js"></script>
+    <script src="scripts/screens/controls.js"></script>
+    <script src="scripts/screens/credits.js"></script>
+    <script src="scripts/screens/gameover.js"></script>
+    <script src="scripts/screens/pausegame.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+body, html {
+    height: 100%;
+}
+
+p {
+    margin: 0px;
+}
+
+html {
+    background: url(images/background2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    /* font-family: 'Londrina Outline', cursive; */
+    font-family: 'Bungee Outline', cursive;
+    /* color: rgb(91, 183, 229); */
+    color: rgb(65, 201, 8);
+}
+
+#audio-controls {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    /* right: 10; */
+    color: rgb(65, 201, 8);
+    /* font-family: 'Kanit', sans-serif; */
+}
+
+/* Hide the browser's default checkbox */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* all styles below with 'container' taken from w3schools custom checkbox tutorial */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: rgb(10, 59, 49);
+}
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input~.checkmark {
+    background-color: rgb(32, 112, 96);
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked~.checkmark {
+    background-color: rgb(65, 201, 8);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#game {
+    margin: auto;
+    display: block;
+    /* width: 850px;
+    height: 650px; */
+    /* width: 65vw; */
+    width: 115vh;
+    height: 85vh;
+    border-style: solid;
+    border-width: 4px;
+    background-color: rgba(136, 136, 255, 0.3);
+    border-radius: 10px;
+    border-color: rgb(65, 201, 8);
+    font-size: 40px;
+}
+
+.game-over-screen {
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Bungee Outline', cursive;
+    color: rgb(65, 201, 8);
+    padding: 20;
+}
+
+#high-scores-title {
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Bungee Outline', cursive;
+    color: rgb(65, 201, 8);
+    padding: 20;
+}
+
+.score-list {
+    margin: auto;
+    font-size: 25px;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(65, 201, 8);
+}
+
+.controls-list {
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(65, 201, 8);
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+ul.menu {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.menu li {
+    margin: 0.8em 0;
+}
+
+ul.menu li button {
+    font-family: Arial, sans-serif;
+    font-size: 0.6em;
+    color: rgb(221, 212, 77);
+    width: 10em;
+    height: 1.5em;
+    background: rgba(11, 37, 79, .2);
+    border: 0.1em solid rgb(65, 201, 8);
+    ;
+    border-radius: 0.8em;
+    border-width: 4px;
+    box-shadow: 0.2em 0.2em 0.3em rgb(17, 70, 20);
+}
+
+ul.menu li button:hover {
+    background: rgba(14, 55, 121, .8);
+}
+
+ul.menu li button:active {
+    color: rgba(11, 37, 79, .2);
+    background: rgb(0, 0, 0);
+}
+
+#game .screen {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#game .screen.active {
+    display: block;
+}
