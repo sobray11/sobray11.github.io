@@ -70,14 +70,11 @@
     location-based features will not.</p>
 
   <h3>Earthquake alerts</h3>
-  <p>To send you alert notifications, we store each alert you have in Google Firebase (Cloud Firestore). An alert
-    record contains: the alert's name, center location (latitude, longitude and a coarse location code), radius,
-    minimum magnitude, whether it is turned on, when it was last updated, an anonymous user ID, and your device's
-    push-notification token. When you first allow location access, the App creates one alert centered on your location
-    ("Near me").</p>
-  <p>The anonymous user ID comes from Firebase Authentication anonymous sign-in. We do not ask for your name, email
-    address, phone number or any account login. The push-notification token comes from Firebase Cloud Messaging and is
-    used only to deliver notifications to your device.</p>
+  <p>To send you alert notifications, we store your alerts on servers provided by Google. Each alert includes its
+    name, center location, radius and minimum magnitude, whether it is turned on, an anonymous identifier for your
+    installation of the App, and a notification token used only to deliver alerts to your device. When you first allow
+    location access, the App creates one alert centered on your location ("Near me").</p>
+  <p>We do not ask for your name, email address, phone number or any account login.</p>
 
   <h3>Analytics</h3>
   <p>The App uses Google Analytics for Firebase to understand how the App is used, for example which screens are
@@ -101,7 +98,7 @@
     counters used to decide when to ask for an app review are stored locally on your device and are not sent to us.</p>
 
   <h3>Maps and earthquake data</h3>
-  <p>Maps are provided by the Google Maps SDK. Earthquake data is downloaded from the USGS Earthquake Hazards Program.
+  <p>Maps are provided by Google Maps. Earthquake data is downloaded from the USGS Earthquake Hazards Program.
     As with any internet request, these services receive your IP address. When you use "Near me", USGS also receives
     your approximate coordinates as part of the request.</p>
 
@@ -112,7 +109,7 @@
         Google Play Billing and Google Maps</a> (Google Maps use is also subject to the Google Maps/Google Earth
       Additional Terms of Service)</li>
     <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Google
-        Firebase</a> (Authentication, Cloud Firestore, Cloud Messaging, Google Analytics for Firebase)</li>
+        Firebase</a> (data storage, notifications and analytics)</li>
     <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank"
         rel="noopener noreferrer">Google AdMob</a></li>
     <li><a href="https://www.usgs.gov/policies-and-notices" target="_blank" rel="noopener noreferrer">U.S. Geological
@@ -126,15 +123,15 @@
   <ul>
     <li><strong>Alerts:</strong> stored until you delete them. Deleting an alert in the App (Alerts tab) removes it from
       our database.</li>
-    <li><strong>Everything else we hold:</strong> to have all data associated with your anonymous user ID deleted,
+    <li><strong>Everything else we hold:</strong> to have all data associated with your installation deleted,
       email <a href="mailto:stodevacc@gmail.com">stodevacc@gmail.com</a> and we will respond in a reasonable time.</li>
     <li><strong>On your device:</strong> uninstalling the App removes all locally stored data.</li>
     <li>Analytics and advertising data are retained by Google according to its own retention policies.</li>
   </ul>
 
   <h2>Security</h2>
-  <p>Data sent between the App and these services is encrypted in transit. Alert data is stored in Google Firebase,
-    which applies its own security protections.</p>
+  <p>Data sent between the App and these services is encrypted in transit, and alert data is stored on Google's
+    servers with Google's security protections.</p>
 
   <h2>Children</h2>
   <p>The App is not directed to children under 13, and we do not knowingly collect personal information from them. If
